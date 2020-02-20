@@ -31,7 +31,6 @@ abstract class AbsPreference
     private val editor: SharedPreferences.Editor
     private val preferences: SharedPreferences
 
-
     init {
         preferences = context.getSharedPreferences(getDefaultPreferenceName(context, preferenceName), Context.MODE_PRIVATE)
         editor = preferences.edit()
@@ -82,11 +81,11 @@ abstract class AbsPreference
         return preferences.getLong(key, defaultValue)
     }
 
-    fun getPreferenceOptionalString(key: String, defaultValue: String? = null): String {
+    fun getPreferenceOptionalString(key: String, defaultValue: String? = null): String? {
         return preferences.getString(key, defaultValue)
     }
 
-    fun getPreferenceString(key: String, defaultValue: String = ""): String {
+    fun getPreferenceString(key: String, defaultValue: String = ""): String? {
         return preferences.getString(key, defaultValue)
     }
 }

@@ -124,7 +124,6 @@ android {
 
 dependencies {
     implementation "org.jetbrains.kotlin:kotlin-stdlib-jdk7:$versions.kotlin"
-    implementation "org.jetbrains.kotlin:kotlin-reflect:$versions.kotlin"
     implementation "androidx.appcompat:appcompat:$versions.androidxAppcompat"
     implementation "androidx.recyclerview:recyclerview:$versions.recyclerView"
     implementation "androidx.lifecycle:lifecycle-extensions:$versions.lifecycle"

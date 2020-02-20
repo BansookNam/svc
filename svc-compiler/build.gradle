@@ -19,6 +19,7 @@ dependencies {
     kapt project(":svc-annotation")
     implementation project(":svc-annotation")
 
+    implementation "org.jetbrains.kotlin:kotlin-reflect:$versions.kotlin"
     implementation "com.squareup:kotlinpoet:$versions.kotlinPoet"
     implementation "com.google.auto.service:auto-service:$versions.autoService"
     kapt "com.google.auto.service:auto-service:$versions.autoService"
@@ -104,8 +105,10 @@ bintray {
             vcsTag = rootProject.ext.libVersionName
 
             gpg {
-                sign = true                                                 //Determines whether to GPG sign the files. The default is false
-                passphrase = properties.getProperty("bintray.gpgPassword")  //Optional. The passphrase for GPG signing'
+                sign = true
+                //Determines whether to GPG sign the files. The default is false
+                passphrase = properties.getProperty("bintray.gpgPassword")
+                //Optional. The passphrase for GPG signing'
             }
         }
     }

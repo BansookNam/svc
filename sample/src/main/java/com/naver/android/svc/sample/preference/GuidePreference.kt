@@ -18,7 +18,6 @@ package com.naver.android.svc.sample.preference
 import com.naver.android.svc.preference.AbsPreference
 import com.naver.android.svc.sample.MainApplication
 
-
 /**
  * @author bs.nam@navercorp.com 2019. 3. 20..
  */
